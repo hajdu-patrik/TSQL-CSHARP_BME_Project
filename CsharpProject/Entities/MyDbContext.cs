@@ -21,7 +21,7 @@ public partial class MyDbContext : DbContext
     /**
      * These properties represent tables in the code.
      * db.Products in C#, EF Core will referring to the SQL [Product] table.
-     * These are the "entry points" to the data.
+     * These are the "entry points" to the data. (These are the navigation properties)
      */
     public virtual DbSet<Category> Categories { get; set; }
     public virtual DbSet<Order> Orders { get; set; }
