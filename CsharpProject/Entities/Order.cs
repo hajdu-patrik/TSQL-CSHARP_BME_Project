@@ -3,7 +3,8 @@ using System.Collections.Generic;
 
 namespace CsharpProject.Entities;
 
-public partial class Order {
+public partial class Order
+{
     public int ID { get; set; }
     public DateTime Date { get; set; }
     public DateTime Deadline { get; set; }

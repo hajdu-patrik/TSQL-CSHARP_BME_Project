@@ -13,7 +13,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CsharpProject.Entities;
 
-public partial class MyDbContext : DbContext {
+public partial class MyDbContext : DbContext
+{
     public MyDbContext() {}
     public MyDbContext(DbContextOptions<MyDbContext> options) : base(options) {}
 
