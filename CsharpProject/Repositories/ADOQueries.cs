@@ -21,9 +21,7 @@ namespace CsharpProject.Repositories
             {
                 // Writing an SQL command
                 string sql = @"
-                    SELECT 
-                        p.ID, p.Name, p.Price, p.Stock, p.VATPercentage, p.Description, p.CategoryID,
-                        c.ID AS CatID, c.Name AS CatName
+                    SELECT p.ID, p.Name, p.Price, p.Stock, p.VATPercentage, p.Description, p.CategoryID, c.ID AS CatID, c.Name AS CatName
                     FROM Product p
                     INNER JOIN Category c ON p.CategoryID = c.ID";
 
@@ -158,9 +156,7 @@ namespace CsharpProject.Repositories
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
                 string sql = @"
-                    SELECT 
-                        o.ID AS OrderID, o.Date, o.Deadline, o.Status, o.PaymentMethod,
-                        p.ID AS ProdID, p.Name AS ProdName, p.Price, p.Stock
+                    SELECT o.ID AS OrderID, o.Date, o.Deadline, o.Status, o.PaymentMethod, p.ID AS ProdID, p.Name AS ProdName, p.Price, p.Stock
                     FROM [Order] o
                     INNER JOIN Product p ON o.ProductID = p.ID
                     WHERE o.ID = @Id";
