@@ -347,8 +347,7 @@ namespace CsharpProject
                 using (var db = new MyDbContext())
                 {
                     var categories = db.Categories
-                        .Where(c => c.Products.Any(p => p.Price > 50000) // Has expensive product
-                                 && c.Products.All(p => p.Stock > 0))    // AND all products are in stock
+                        .Where(c => c.Products.Any(p => p.Price > 50000) && c.Products.All(p => p.Stock > 0))
                         .Select(c => c.Name)
                         .ToList();
 
@@ -405,7 +404,7 @@ namespace CsharpProject
                     var topOrder = db.Orders
                         .Include(o => o.Product)
                         .Where(o => o.Status == "Processing" || o.Status == "Shipped")
-                        .OrderByDescending(o => o.Product.Price) // Descending by Price
+                        .OrderByDescending(o => o.Product.Price)
                         .FirstOrDefault();
 
                     if (topOrder != null)
@@ -425,15 +424,13 @@ namespace CsharpProject
                 Console.WriteLine("\n--- 12. GetSimpleBookList() was called! ---");
                 using (var db = new MyDbContext())
                 {
-                    // NOTE: Changed "Könyvek" to "Books" to maintain English consistency
                     var books = db.Products
                         .Where(p => p.Category.Name.Contains("Books"))
                         .Select(p => new
                         {
-                            ProductName = p.Name, // Renamed from TermekNev
-                                                  // Calculation in projection
+                            ProductName = p.Name,
                             NetPrice = p.Price / (1 + (decimal)p.Vatpercentage / 100),
-                            StockStatus = p.Stock > 10 ? "Available" : "Low Stock" // Ternary operator translation
+                            StockStatus = p.Stock > 10 ? "Available" : "Low Stock"
                         })
                         .ToList();
 
@@ -451,6 +448,5 @@ namespace CsharpProject
                 }
             }
         }
-
     }
 }
