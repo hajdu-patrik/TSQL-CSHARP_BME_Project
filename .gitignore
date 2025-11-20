@@ -1,6 +1,3 @@
-# Visual Studio files
 .vs/
-
-# Translation results (binaries)
 bin/
 obj/
