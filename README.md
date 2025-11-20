@@ -1,4 +1,4 @@
-# 🛒 C# Data-Driven System Demo (EF Core vs. ADO.NET)
+# Data-Driven System Demo (EF Core vs. ADO.NET)
 
 This project demonstrates database management in a simple commercial system using two different approaches within a C# environment. The goal is to compare **Microsoft Entity Framework Core (ORM)** and native **ADO.NET** technologies, highlighting the strengths and usage patterns of both.
 
