@@ -2,6 +2,8 @@
 
 This project demonstrates database management in a simple commercial system using two different approaches within a C# environment. The goal is to compare **Microsoft Entity Framework Core (ORM)** and native **ADO.NET** technologies, highlighting the strengths and usage patterns of both.
 
+---
+
 ## 📋 Project Overview
 
 The system manages a relational database consisting of three tables (MSSQL), containing the following entities:
@@ -10,6 +12,8 @@ The system manages a relational database consisting of three tables (MSSQL), con
 * **Order**: Orders referencing products.
 
 The project demonstrates how to query data, insert records, and handle transactions using both technologies.
+
+---
 
 ## 🛠️ Technologies Used
 
