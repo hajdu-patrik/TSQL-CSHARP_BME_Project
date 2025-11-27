@@ -1,3 +1,11 @@
+![C#](https://img.shields.io/badge/C%23-%23239120.svg?style=flat&logo=c-sharp&logoColor=white)
+![.NET](https://img.shields.io/badge/.NET-5C2D91?style=flat&logo=.net&logoColor=white)
+![MSSQL](https://img.shields.io/badge/Database-MSSQL-CC2927?style=flat&logo=microsoftsqlserver&logoColor=white)
+![EF Core](https://img.shields.io/badge/ORM-EF_Core_(Db--First)-512BD4?style=flat&logo=.net&logoColor=white)
+![ADO.NET](https://img.shields.io/badge/Data-ADO.NET_(Raw_SQL)-4A4A55?style=flat&logo=microsoftsqlserver&logoColor=white)
+![LINQ](https://img.shields.io/badge/Query-LINQ-blue?style=flat)
+![Transaction](https://img.shields.io/badge/Logic-ACID_Transaction-important?style=flat)
+![Scaffolding](https://img.shields.io/badge/Tool-Scaffolding-orange?style=flat)
 # Data-Driven System Demo (EF Core vs. ADO.NET)
 
 This project demonstrates database management in a simple commercial system using two different approaches within a C# environment. The goal is to compare **Microsoft Entity Framework Core (ORM)** and native **ADO.NET** technologies, highlighting the strengths and usage patterns of both.
